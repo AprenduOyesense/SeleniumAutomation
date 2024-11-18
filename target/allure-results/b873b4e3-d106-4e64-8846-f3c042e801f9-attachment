@@ -1,0 +1,1 @@
+Set text Admin@12345 on By.xpath: //input[@id='password']

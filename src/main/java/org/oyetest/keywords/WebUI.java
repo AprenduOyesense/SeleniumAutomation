@@ -12,6 +12,8 @@ import org.oyetest.utils.DateUtils;
 import org.oyetest.utils.LogUtils;
 import io.qameta.allure.Step;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
