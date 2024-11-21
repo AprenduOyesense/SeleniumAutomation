@@ -196,5 +196,12 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
         ExtentReportManager.logMessage("Test failed but it is in defined success ratio: " + getTestName(iTestResult));
     }
-
+    public void logSubIdForTest(ITestResult result) {
+        String subid = result.getTestContext().getAttribute("subid").toString(); // Fetching subid from the test context
+        if (subid != null && !subid.isEmpty()) {
+            LogUtils.info("SubId for test case " + getTestName(result) + ": " + subid);
+            ExtentReportManager.addTestDetails("SubId: " + subid);
+        }
+    }
+    
 }
